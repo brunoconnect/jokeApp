@@ -12,7 +12,7 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toobar"
             android:layout_width="match_parent"
-            android:theme="@style/Theme.JokerAppDev.PopupOverlay"
+            app:popupTheme="@style/Theme.JokerAppDev.PopupOverlay"
             android:background="?attr/colorPrimary"
             android:layout_height="?attr/actionBarSize" />
     </com.google.android.material.appbar.AppBarLayout>
