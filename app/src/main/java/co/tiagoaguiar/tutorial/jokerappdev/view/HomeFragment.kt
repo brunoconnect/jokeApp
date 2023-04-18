@@ -33,7 +33,7 @@ class HomeFragment : Fragment() {
         adapter.add(CategoryItem(Category("Categoria 1", 0xFFface6e)))
         adapter.add(CategoryItem(Category("Categoria 2", 0xFFecd16d)))
         adapter.add(CategoryItem(Category("Categoria 3", 0xFFded36e)))
-        adapter.add(CategoryItem(Category("Categoria 4", 0xFFcfd571))) 
+        adapter.add(CategoryItem(Category("Categoria 4", 0xFFcfd571)))
 
         adapter.notifyDataSetChanged()
     }
