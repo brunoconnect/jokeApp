@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
 
     installSplashScreen()
-]
+
     setContentView(R.layout.activity_main)
 
     val toolbar = findViewById<Toolbar>(R.id.toobar)
