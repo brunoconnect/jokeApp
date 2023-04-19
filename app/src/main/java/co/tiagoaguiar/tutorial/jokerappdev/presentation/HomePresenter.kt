@@ -1,5 +1,6 @@
 package co.tiagoaguiar.tutorial.jokerappdev.presentation
 
+import android.graphics.Color
 import co.tiagoaguiar.tutorial.jokerappdev.data.CategoryRemoteDataSource
 import co.tiagoaguiar.tutorial.jokerappdev.data.ListCategoryCallback
 import co.tiagoaguiar.tutorial.jokerappdev.model.Category
@@ -17,7 +18,17 @@ class HomePresenter(
     }
 
     override fun onSucess(response: List<String>){
-        val categories = response.map { Category(it, 0xFFFF0000)}
+        val start = 40
+        val end = 190
+        val diff = (end - start) / response.size
+        val categories = response.mapIndexed { index, s ->
+            val hsv = floatArrayOf(
+                start + (diff * index).toFloat(),
+                100.0f,
+                100.0f
+            )
+            Category(s, Color.HSVToColor(hsv).toLong())
+        }
         view.showCategories(categories)
     }
 
